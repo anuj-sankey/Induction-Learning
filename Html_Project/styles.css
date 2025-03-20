@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    border: 1px solid black;
+}
+
+.div1{
+    background: red;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.div2{
+    background: yellow;
+    height: 100vh; /* Adjust height as needed */
+}
