@@ -11,7 +11,7 @@ body {
 }
 
 .left-column {
-    flex: 1.1;
+    flex: 1;
     background: url("../assets/download.png") no-repeat center center;
     background-size: cover;
 }
@@ -22,7 +22,6 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    background-color: #fff;
 }
 
 .login-form {
@@ -123,20 +122,68 @@ input[type="password"] {
     color: #007bff;
 }
 
+@media (max-width: 1024px) {
+    .left-column {
+        flex: 0.8;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
+        height: auto;
     }
 
     .left-column {
-        flex: none;
-        background: none;
+        width: 100%;
         height: 40vh;
+        background-size: cover;
+        background-position: center;
     }
 
     .right-column {
-        flex: none;
-        height: 60vh;
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .login-form {
+        max-width: 100%;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 0.6rem;
+    }
+
+    .btn {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-google {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-column {
+        height: 35vh;
+    }
+
+    .right-column {
+        height: 65vh;
         padding: 1.5rem;
+    }
+
+    .login-form h2 {
+        font-size: 1.2rem;
+    }
+
+    .signup-text {
+        font-size: 0.8rem;
     }
 }
